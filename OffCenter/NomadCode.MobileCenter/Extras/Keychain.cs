@@ -38,14 +38,18 @@ namespace NomadCode.MobileCenter
 
 		public bool SaveItemToKeychain (string service, string account, string privateKey)
 		{
-			var record = genericRecord (service);
-
-			record.Account = account;
-
-			record.ValueData = NSData.FromString (privateKey, NSStringEncoding.UTF8);
+			SecStatusCode oldStatus;
 
 			// Delete any existing items
-			SecKeyChain.Remove (record);
+			var oldRecord = SecKeyChain.QueryAsRecord(genericRecord(service), out oldStatus);
+
+			if (oldStatus == SecStatusCode.Success && oldRecord != null)
+			{
+				removeItemFromKeychain(service);
+			}
+			var record = genericRecord(service);
+			record.Account = account;
+			record.ValueData = NSData.FromString(privateKey, NSStringEncoding.UTF8);
 
 			// Add the new keychain item
 			var status = SecKeyChain.Add (record);
