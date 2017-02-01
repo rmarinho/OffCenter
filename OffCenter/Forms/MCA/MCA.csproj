@@ -39,6 +39,9 @@
     <EmbeddedResource Include="ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuildBeaconPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -70,6 +73,10 @@
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BuildBeaconViewModel.cs" />
+    <Compile Include="BuildBeaconPage.xaml.cs">
+      <DependentUpon>BuildBeaconPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MBuild.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

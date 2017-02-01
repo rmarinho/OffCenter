@@ -13,9 +13,9 @@ namespace MCA
 			BindingContext = new BeaconsViewModel();
 		}
 
-		void HandleItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+		async void HandleItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
 		{
-
+			await Navigation.PushAsync(new BuildBeaconPage());
 		}
 	}
 }

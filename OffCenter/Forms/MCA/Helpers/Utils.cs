@@ -38,5 +38,27 @@ namespace MCA
 
 			return Colors.DefaultIconText.Green;
 		}
+
+		public static Color GetDefaultStatusTextColor(BuildStatus status)
+		{
+			switch (status)
+			{
+				case BuildStatus.Abort:
+					return Color.Yellow.MultiplyAlpha(0.5);
+				case BuildStatus.Building:
+					return Color.Blue.MultiplyAlpha(0.5);
+				case BuildStatus.Built:
+					return Color.Green.MultiplyAlpha(0.5);
+				case BuildStatus.Fail:
+					return Color.Red.MultiplyAlpha(0.5);
+			}
+
+			return Color.Gray.MultiplyAlpha(0.5);
+		}
+
+		public static string GetFakeAvatar()
+		{
+			return string.Format("https://www.gravatar.com/avatar/{0}?s=200", "96523af99438b25dd0a362e11ec31021");
+		}
 	}
 }

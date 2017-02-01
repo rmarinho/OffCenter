@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MCA.BuildBeaconPage" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+	<ListView ItemsSource="{Binding Builds}" RowHeight="80">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<Grid Padding="10,5,10,5" ColumnSpacing="3">
+						<Grid.RowDefinitions>
+							<RowDefinition>
+							</RowDefinition>
+							<RowDefinition>
+							</RowDefinition>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.3*">
+							</ColumnDefinition>
+							<ColumnDefinition Width="Auto">
+							</ColumnDefinition>
+							<ColumnDefinition Width="0.5*">
+							</ColumnDefinition>
+							<ColumnDefinition Width="Auto">
+							</ColumnDefinition>
+						</Grid.ColumnDefinitions>
+						<Label Text="{Binding BranchName}" VerticalOptions="Center" FontSize="11" FontAttributes="Bold">
+						</Label>
+						<Label Text="{Binding BranchStatusText}" FontSize="10" VerticalOptions="Start" BackgroundColor="{Binding BranchStatusColor}" Grid.Row="1">
+						</Label>
+						<controls:CircleImage Grid.Column="1" Source="{Binding CommitUserImage}" Grid.RowSpan="2" WidthRequest="24" HeightRequest="24" BorderThickness="1" BorderColor="Gray" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center" />
+						<Label Text="{Binding CommitMessage}" Grid.Column="2" FontSize="11" VerticalOptions="Center">
+						</Label>
+						<Label Text="{Binding CommitUser}" FontSize="10" Grid.Column="2" Grid.Row="1">
+						</Label>
+						<Label Text="{Binding Trigger}" Grid.Column="3" FontSize="10" HorizontalOptions="End" VerticalOptions="End">
+						</Label>
+						<Label Text="{Binding Date}" Grid.Column="3" TextColor="Silver" FontSize="8" HorizontalOptions="End" VerticalOptions="Start" Grid.Row="1"/>
+					</Grid>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

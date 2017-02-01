@@ -9,8 +9,6 @@ namespace MCA
 {
 	public class MainViewModel : BaseViewModel
 	{
-		string s_fakeImage = string.Format(s_gravatar, "96523af99438b25dd0a362e11ec31021");
-		static string s_gravatar = "https://www.gravatar.com/avatar/{0}?s=200";
 
 		ObservableCollection<MApp> _apps;
 		public ObservableCollection<MApp> Apps
@@ -42,7 +40,7 @@ namespace MCA
 		{
 			get
 			{
-				return User?.AvatarUrl == null ? ImageSource.FromUri(new Uri(s_fakeImage)) : ImageSource.FromUri(new Uri(User.AvatarUrl));
+				return User?.AvatarUrl == null ? ImageSource.FromUri(new Uri(Utils.GetFakeAvatar())) : ImageSource.FromUri(new Uri(User.AvatarUrl));
 			}
 		}
 

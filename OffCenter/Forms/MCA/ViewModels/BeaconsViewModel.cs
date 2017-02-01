@@ -9,13 +9,7 @@ namespace MCA
 {
 	public class BeaconsViewModel : BaseViewModel
 	{
-		public BeaconsViewModel()
-		{
-			// Beacon.All
-		}
-
 		public IList<MBeacon> Beacons => Beacon.All.Select((KeyValuePair<Beacons, Beacon> arg) => new MBeacon(arg.Key)).ToList();
-
 	}
 }
 
