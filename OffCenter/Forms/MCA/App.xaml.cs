@@ -1,4 +1,7 @@
 ﻿using Xamarin.Forms;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace MCA
 {
@@ -7,6 +10,7 @@ namespace MCA
 		public App()
 		{
 			InitializeComponent();
+			MobileCenter.Start(typeof(Analytics), typeof(Crashes));
 			DependencyService.Register<ILoginService, LoginService>();
 			MainPage = new NavigationPage(new MCAPage());
 		}
