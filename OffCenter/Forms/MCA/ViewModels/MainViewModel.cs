@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using NomadCode.MobileCenter.Models;
 using System.Linq;
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile.Analytics;
+using System.Collections.Generic;
 
 namespace MCA
 {
@@ -33,6 +35,7 @@ namespace MCA
 			set
 			{
 				SetField(ref _user, value, additionalprops: new[] { nameof(UserAvatarUrl) });
+				Analytics.TrackEvent("User", new Dictionary<string, string> { { "UserName", User.DisplayName }, { "UserID", User.Id } });
 			}
 		}
 
@@ -51,6 +54,7 @@ namespace MCA
 				Apps = new ObservableCollection<MApp>(McClient.Shared.Apps.Select((AppResponse arg) => { return new MApp { Name = arg.DisplayName, Icon = Utils.GetDefaultIcon(arg.Name), OS = arg.Os }; }));
 				if (Apps.Count > 0)
 					User = McClient.Shared.Apps.First().Owner;
+				Analytics.TrackEvent("GotApps", new Dictionary<string, string> { { "AppCount", Apps.Count } });
 
 			});
 		}

@@ -1,4 +1,6 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.Generic;
+using System.Windows.Input;
+using Microsoft.Azure.Mobile.Analytics;
 using Xamarin.Forms;
 
 namespace MCA
@@ -43,7 +45,10 @@ namespace MCA
 
 		public Command LoginCommand => _loginCommand ?? (_loginCommand = new Command(async () =>
 		{
+			Analytics.TrackEvent("Login", new Dictionary<string, string> { { "User", Username } });
 			var loginSucess = await _loginService.LoginAsync(Username, Password);
+
+			Analytics.TrackEvent(loginSucess ? "LoginOK" : "LoginFailure", new Dictionary<string, string> { { "User", Username } });
 			if (!loginSucess)
 			{
 				Password = string.Empty;
