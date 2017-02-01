@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCA.iOS", "Forms\iOS\MCA.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCA.Droid", "Forms\Droid\MCA.Droid.csproj", "{19D99198-3694-446B-A4D5-15654480940C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCA.macOS", "Forms\Mac\MCA.macOS.csproj", "{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -67,5 +69,13 @@ Global
 		{19D99198-3694-446B-A4D5-15654480940C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{19D99198-3694-446B-A4D5-15654480940C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{19D99198-3694-446B-A4D5-15654480940C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Release|iPhone.ActiveCfg = Release|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Release|iPhone.Build.0 = Release|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Debug|iPhone.ActiveCfg = Debug|iPhoneSimulator
+		{4727457E-3279-4DA3-A4FC-4F2FC2B10F94}.Debug|iPhone.Build.0 = Debug|iPhoneSimulator
 	EndGlobalSection
 EndGlobal
