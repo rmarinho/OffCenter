@@ -43,7 +43,11 @@ namespace MCA
 
 		public Command LoginCommand => _loginCommand ?? (_loginCommand = new Command(async () =>
 		{
-			await _loginService.LoginAsync(Username, Password);
+			var loginSucess = await _loginService.LoginAsync(Username, Password);
+			if (!loginSucess)
+			{
+				Password = string.Empty;
+			}
 			//	
 		}, () => !string.IsNullOrEmpty(Password) && !string.IsNullOrEmpty(Username)));
 	}

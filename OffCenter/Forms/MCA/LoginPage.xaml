@@ -10,7 +10,7 @@
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 			<Image Grid.Row="0" Source="logo_mobile_center" Aspect="AspectFill" />
-			<Entry Margin="20,0,20,0" Grid.Row="2" Text="{Binding Username}" Placeholder="username" VerticalOptions="Center" />
+			<Entry Margin="20,0,20,0" Grid.Row="2" Text="{Binding Username}" Keyboard="Email" Placeholder="username" VerticalOptions="Center" />
 			<Entry Margin="20,0,20,0" Grid.Row="3" Text="{Binding Password}" Placeholder="password" IsPassword="true" VerticalOptions="Center" />
 			<Button Grid.Row="4" Text="login" TextColor="White" Command="{Binding LoginCommand}" />
 		</Grid>
