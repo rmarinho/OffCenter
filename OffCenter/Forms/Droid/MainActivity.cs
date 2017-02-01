@@ -8,6 +8,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace MCA.Droid
 {
@@ -23,7 +26,7 @@ namespace MCA.Droid
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 			DependencyService.Register<ISecureService, SecureService>();
-
+			MobileCenter.Configure("88be851c-0e2a-42e0-a70a-666d45e5c89d");
 			LoadApplication(new App());
 		}
 	}
