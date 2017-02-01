@@ -3,7 +3,7 @@
 	<ContentPage.ToolbarItems>
         <ToolbarItem Icon="i_tab_user" Text="profile" Clicked="HandleProfileClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ListView ItemsSource="{Binding Apps}" CachingStrategy="RecycleElement" RowHeight="60" ItemTapped="HandleItemTapped">
+    <ListView x:Name="lstApps" ItemsSource="{Binding Apps}" CachingStrategy="RecycleElement" RowHeight="60" ItemTapped="HandleItemTapped" Opacity="0">
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<ViewCell>

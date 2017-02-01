@@ -1,4 +1,5 @@
-﻿using NomadCode.MobileCenter;
+﻿using System.Threading.Tasks;
+using NomadCode.MobileCenter;
 using Xamarin.Forms;
 
 namespace MCA
@@ -14,9 +15,10 @@ namespace MCA
 			{
 				if (e)
 				{
+
 					await ViewModel.InitAsync();
 					if (showingModal)
-						await Navigation.PopModalAsync();
+						await Task.WhenAll(lstApps.FadeTo(1, 600), Navigation.PopModalAsync());
 					showingModal = false;
 				}
 			};
