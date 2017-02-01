@@ -18,7 +18,7 @@
 		<DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
 		<ErrorReport>prompt</ErrorReport>
 		<WarningLevel>4</WarningLevel>
-		<CodesignKey>iPhone Developer</CodesignKey>
+		<CodesignKey>iPhone Developer: me@ruimarinho.net (G6DXESA369)</CodesignKey>
 		<MtouchDebug>true</MtouchDebug>
 		<MtouchFastDev>true</MtouchFastDev>
 		<MtouchProfiling>true</MtouchProfiling>
@@ -31,6 +31,7 @@
 		<MtouchTlsProvider>Default</MtouchTlsProvider>
 		<DeviceSpecificBuild>false</DeviceSpecificBuild>
 		<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+		<CodesignProvision>25da96a5-08bb-4399-95ce-24e4e768c1f7</CodesignProvision>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
 		<DebugType>pdbonly</DebugType>
