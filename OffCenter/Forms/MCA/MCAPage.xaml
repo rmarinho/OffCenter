@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage Title="Apps" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MCA" x:Class="MCA.MCAPage">
 	<ContentPage.ToolbarItems>
-        <ToolbarItem Icon="i_tab_user" Text="profile" Clicked="HandleProfileClicked"></ToolbarItem>
+        <ToolbarItem Text="profile" Clicked="HandleProfileClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ListView x:Name="lstApps" ItemsSource="{Binding Apps}" CachingStrategy="RecycleElement" RowHeight="60" ItemTapped="HandleItemTapped" Opacity="0">
 		<ListView.ItemTemplate>

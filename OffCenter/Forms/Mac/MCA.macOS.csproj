@@ -94,13 +94,9 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="..\iOS\Services\SecureService.cs">
+      <Link>Services\SecureService.cs</Link>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MCA\MCA.csproj">

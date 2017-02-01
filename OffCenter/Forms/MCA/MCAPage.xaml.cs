@@ -42,7 +42,7 @@ namespace MCA
 			}
 			else
 			{
-				await ViewModel.InitAsync();
+				await Task.WhenAll(ViewModel.InitAsync(), lstApps.FadeTo(1, 600));
 			}
 
 		}
