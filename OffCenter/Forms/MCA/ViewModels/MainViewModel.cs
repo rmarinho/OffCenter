@@ -32,6 +32,7 @@ namespace MCA
 			return Task.Run(() =>
 			{
 				Apps = new ObservableCollection<MApp>(McClient.Shared.Apps.Select((AppResponse arg) => { return new MApp { Name = arg.DisplayName, Icon = Utils.GetDefaultIcon(arg.Name), OS = arg.Os }; }));
+
 			});
 		}
 	}

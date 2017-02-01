@@ -1,6 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage Title="Apps" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MCA" x:Class="MCA.MCAPage">
-	<ListView ItemsSource="{Binding Apps}" CachingStrategy="RecycleElement" RowHeight="60">
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Icon="i_tab_user" Text="profile" Clicked="HandleProfileClicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ListView ItemsSource="{Binding Apps}" CachingStrategy="RecycleElement" RowHeight="60" ItemTapped="HandleItemTapped">
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<ViewCell>

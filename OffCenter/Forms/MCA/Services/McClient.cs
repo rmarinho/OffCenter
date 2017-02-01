@@ -77,7 +77,19 @@ namespace MCA
 				return false;
 			}
 		}
+		public async Task<bool> GetBuilds(AppResponse app)
+		{
+			try
+			{
 
+				return true;
+			}
+			catch (System.Exception ex)
+			{
+				System.Diagnostics.Debug.WriteLine(ex.Message);
+				return false;
+			}
+		}
 
 		async Task<bool> GetApps()
 		{
@@ -88,7 +100,7 @@ namespace MCA
 				var apps = appsObj as List<AppResponse>;
 
 				Apps = apps.OrderBy(a => a.DisplayName).ToList();
-
+				var s = McClient.Shared.GetBuilds(Apps.First());
 				return Apps?.Count > 0;
 			}
 			catch (System.Exception ex)

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MCA.BeaconsPage">
+    <ListView ItemsSource="{Binding Beacons}" CachingStrategy="RecycleElement" RowHeight="70" ItemTapped="HandleItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="15,0,25,0" RowSpacing="0" ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                      
+                        <Image Source="{Binding Icon}" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFit"  />
+                        <Label Text="{Binding Name}" Grid.Column="3" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

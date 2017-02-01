@@ -19,8 +19,6 @@ namespace MCA
 						await Navigation.PopModalAsync();
 					showingModal = false;
 				}
-
-
 			};
 		}
 
@@ -45,6 +43,16 @@ namespace MCA
 				await ViewModel.InitAsync();
 			}
 
+		}
+
+		async void HandleItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+		{
+			await Navigation.PushAsync(new BeaconsPage());
+		}
+
+		async void HandleProfileClicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushModalAsync(new ProfilePage());
 		}
 	}
 }
