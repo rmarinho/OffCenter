@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>MCA</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.xamarin.mca</string>
+	<string>net.ruimarinho.mca</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
