@@ -1,0 +1,3 @@
+﻿MONO_DEBUG=suspend-on-sigsegv
+MONO_LOG_LEVEL=debug
+MONO_LOG_MASK=all
