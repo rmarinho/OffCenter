@@ -15,6 +15,7 @@ using System.ComponentModel;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using ImageCircle.Forms.Plugin.iOS;
 
 //[assembly: ExportRenderer(typeof(Image), typeof(CustomImageRenderer))]
 
@@ -28,6 +29,7 @@ namespace MCA.iOS
 			global::Xamarin.Forms.Forms.Init();
 			UITabBar.Appearance.TintColor = MCA.Colors.Theme.ToUIColor();
 			DependencyService.Register<ISecureService, SecureService>();
+			ImageCircleRenderer.Init();
 			MobileCenter.Configure("9c463df1-36e3-46f5-9d20-7560f7ceedce");
 			LoadApplication(new App());
 			return base.FinishedLaunching(app, options);

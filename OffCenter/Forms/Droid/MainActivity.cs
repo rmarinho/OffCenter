@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace MCA.Droid
 {
@@ -26,6 +27,7 @@ namespace MCA.Droid
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 			DependencyService.Register<ISecureService, SecureService>();
+			ImageCircleRenderer.Init();
 			MobileCenter.Configure("88be851c-0e2a-42e0-a70a-666d45e5c89d");
 			LoadApplication(new App());
 		}

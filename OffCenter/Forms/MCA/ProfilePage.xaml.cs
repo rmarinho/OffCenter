@@ -9,6 +9,7 @@ namespace MCA
 	{
 		public ProfilePage()
 		{
+			BackgroundColor = Colors.DarkGrayColor;
 			InitializeComponent();
 		}
 

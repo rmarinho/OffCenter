@@ -48,7 +48,6 @@ namespace MCA
 			{
 				Password = string.Empty;
 			}
-			//	
 		}, () => !string.IsNullOrEmpty(Password) && !string.IsNullOrEmpty(Username)));
 	}
 }

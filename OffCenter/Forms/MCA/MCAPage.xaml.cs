@@ -52,7 +52,7 @@ namespace MCA
 
 		async void HandleProfileClicked(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new ProfilePage());
+			await Navigation.PushModalAsync(new ProfilePage { BindingContext = this.BindingContext });
 		}
 	}
 }
