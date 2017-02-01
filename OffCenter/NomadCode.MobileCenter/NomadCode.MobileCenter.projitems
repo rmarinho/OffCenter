@@ -9,9 +9,6 @@
     <Import_RootNamespace>NomadCode.MobileCenter</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)MyClass.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Account.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\AccountExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiClient\Analytics.cs" />

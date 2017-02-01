@@ -9,9 +9,6 @@
     <Import_RootNamespace>OffCenter.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)MyClass.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Beacons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Bootstrap.cs" />
   </ItemGroup>

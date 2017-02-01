@@ -81,21 +81,21 @@ namespace NomadCode.MobileCenter
 		// https://github.com/xamarin/Xamarin.Auth/blob/portable-bait-and-switch/source/Xamarin.Auth.XamarinAndroid/PlatformSpecific/AndroidAccountStore.Async.cs
 
 
-		Tuple<string, string> getItemFromKeychain (string service)
+		Tuple<string, string> getItemFromKeychain(string service)
 		{
-			throw new NotImplementedException ();
+			throw new NotImplementedException();
 		}
 
 
-		bool saveItemToKeychain (string service, string account, string privateKey)
+		bool saveItemToKeychain(string service, string account, string privateKey)
 		{
-			throw new NotImplementedException ();
+			throw new NotImplementedException();
 		}
 
 
-		void removeItemFromKeychain (string service)
+		void removeItemFromKeychain(string service)
 		{
-			throw new NotImplementedException ();
+			throw new NotImplementedException();
 		}
 #endif
 	}

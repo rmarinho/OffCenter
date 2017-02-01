@@ -1,133 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{3866E91A-6D58-4DC2-A20B-4F62492D6242}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>MCA.iOS</RootNamespace>
-    <AssemblyName>MCA.iOS</AssemblyName>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchProfiling>true</MtouchProfiling>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <IOSDebuggerPort>36872</IOSDebuggerPort>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhone\Release</OutputPath>
-    <DefineConstants></DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <DefineConstants></DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchLink>None</MtouchLink>
-    <MtouchArch>x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchProfiling>true</MtouchProfiling>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MCA\MCA.csproj">
-      <Project>{F1208E10-F41B-4001-8F14-1E5ABCC26F32}</Project>
-      <Name>MCA</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+		<ProjectGuid>{3866E91A-6D58-4DC2-A20B-4F62492D6242}</ProjectGuid>
+		<ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MCA.iOS</RootNamespace>
+		<AssemblyName>MCA.iOS</AssemblyName>
+		<IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+		<DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<CodesignKey>iPhone Developer</CodesignKey>
+		<MtouchDebug>true</MtouchDebug>
+		<MtouchFastDev>true</MtouchFastDev>
+		<MtouchProfiling>true</MtouchProfiling>
+		<MtouchUseSGen>true</MtouchUseSGen>
+		<MtouchUseRefCounting>true</MtouchUseRefCounting>
+		<IOSDebuggerPort>36872</IOSDebuggerPort>
+		<MtouchLink>None</MtouchLink>
+		<MtouchArch>x86_64</MtouchArch>
+		<MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+		<MtouchTlsProvider>Default</MtouchTlsProvider>
+		<DeviceSpecificBuild>false</DeviceSpecificBuild>
+		<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\iPhone\Release</OutputPath>
+		<DefineConstants>
+		</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<CodesignKey>iPhone Developer</CodesignKey>
+		<MtouchUseSGen>true</MtouchUseSGen>
+		<MtouchUseRefCounting>true</MtouchUseRefCounting>
+		<MtouchFloat32>true</MtouchFloat32>
+		<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+		<MtouchLink>SdkOnly</MtouchLink>
+		<MtouchArch>ARMv7, ARM64</MtouchArch>
+		<MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+		<MtouchTlsProvider>Default</MtouchTlsProvider>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+		<DefineConstants>
+		</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<CodesignKey>iPhone Developer</CodesignKey>
+		<MtouchUseSGen>true</MtouchUseSGen>
+		<MtouchUseRefCounting>true</MtouchUseRefCounting>
+		<MtouchLink>None</MtouchLink>
+		<MtouchArch>x86_64</MtouchArch>
+		<MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+		<MtouchTlsProvider>Default</MtouchTlsProvider>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\iPhone\Debug</OutputPath>
+		<DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<CodesignKey>iPhone Developer</CodesignKey>
+		<DeviceSpecificBuild>true</DeviceSpecificBuild>
+		<MtouchDebug>true</MtouchDebug>
+		<MtouchFastDev>true</MtouchFastDev>
+		<MtouchProfiling>true</MtouchProfiling>
+		<MtouchUseSGen>true</MtouchUseSGen>
+		<MtouchUseRefCounting>true</MtouchUseRefCounting>
+		<MtouchFloat32>true</MtouchFloat32>
+		<CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+		<MtouchLink>SdkOnly</MtouchLink>
+		<MtouchArch>ARMv7, ARM64</MtouchArch>
+		<MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+		<MtouchTlsProvider>Default</MtouchTlsProvider>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Core" />
+		<Reference Include="Xamarin.iOS" />
+		<Reference Include="Xamarin.Forms.Core">
+			<HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Forms.Platform">
+			<HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Forms.Platform.iOS">
+			<HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Forms.Xaml">
+			<HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\logo_mobile_center.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\logo_mobile_center.imageset\logo_mobile_center.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_analytics.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_build.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_crashes.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_distribute.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_identity.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_tables.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_test.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_test.imageset\i_beacon_test.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_tables.imageset\i_beacon_tables.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_identity.imageset\i_beacon_identity.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_distribute.imageset\i_beacon_distribute.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_crashes.imageset\i_beacon_crashes.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_build.imageset\i_beacon_build.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_beacon_analytics.imageset\i_beacon_analytics.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_tab_user.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_tab_user.imageset\i_tab_user.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_tab_apps.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_tab_apps.imageset\i_tab_apps.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_blue.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_purple.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_orange.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_yellow.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_green.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_green.imageset\i_app_icon_default_green.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_yellow.imageset\i_app_icon_default_yellow.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_orange.imageset\i_app_icon_default_orange.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_purple.imageset\i_app_icon_default_purple.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_app_icon_default_blue.imageset\i_app_icon_default_blue.pdf" />
+		<ImageAsset Include="Assets.xcassets\i_tab_history.imageset\Contents.json" />
+		<ImageAsset Include="Assets.xcassets\i_tab_history.imageset\i_tab_history.pdf" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Resources\" />
+		<Folder Include="Assets.xcassets\logo_mobile_center.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_analytics.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_build.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_crashes.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_distribute.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_identity.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_tables.imageset\" />
+		<Folder Include="Assets.xcassets\i_beacon_test.imageset\" />
+		<Folder Include="Assets.xcassets\i_tab_user.imageset\" />
+		<Folder Include="Assets.xcassets\i_tab_apps.imageset\" />
+		<Folder Include="Assets.xcassets\i_app_icon_default_blue.imageset\" />
+		<Folder Include="Assets.xcassets\i_app_icon_default_purple.imageset\" />
+		<Folder Include="Assets.xcassets\i_app_icon_default_orange.imageset\" />
+		<Folder Include="Assets.xcassets\i_app_icon_default_yellow.imageset\" />
+		<Folder Include="Assets.xcassets\i_app_icon_default_green.imageset\" />
+		<Folder Include="Assets.xcassets\i_tab_history.imageset\" />
+		<Folder Include="Services\" />
+	</ItemGroup>
+	<ItemGroup>
+		<InterfaceDefinition Include="LaunchScreen.storyboard" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Info.plist" />
+		<None Include="Entitlements.plist" />
+		<None Include="packages.config" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="Main.cs" />
+		<Compile Include="AppDelegate.cs" />
+		<Compile Include="Services\SecureService.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MCA\MCA.csproj">
+			<Project>{F1208E10-F41B-4001-8F14-1E5ABCC26F32}</Project>
+			<Name>MCA</Name>
+		</ProjectReference>
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+	<Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
 </Project>

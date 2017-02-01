@@ -9,6 +9,7 @@ using System.Linq;
 
 namespace NomadCode.MobileCenter
 {
+#if __IOS__
 	public class McClient
 	{
 		Keychain _keychain;
@@ -102,4 +103,5 @@ namespace NomadCode.MobileCenter
 
 		public void StoreCredentials (string username, string password) => keychain.SaveItemToKeychain (Keys.Keychain.Account, username, password);
 	}
+#endif
 }
